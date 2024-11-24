@@ -20,6 +20,10 @@ export default {
             },
             fontFamily: {
                 general: ['GeneralSans-Variable', 'sans-serif'],
+                dmserif: ['DM Serif Text', 'serif'],
+                funnel: ['Funnel Display', 'sans-serif'],
+                inter: ['Inter', 'sans-serif'],
+                oldstandard: ['Old Standard TT', 'serif'],
             },
         },
     },

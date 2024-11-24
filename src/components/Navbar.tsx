@@ -21,7 +21,7 @@ export const Navbar = () => {
     return (
         <nav className="bg-apple-700 p-4">
             <div className="flex justify-between">
-                <div className="font-bold text-apple-50">farmcart</div>
+                <h1 className="font-bold text-apple-50">farmcart</h1>
                 <div>
                     {navLinks.map((link, index) => (
                         <a key={index} href={link.url} className="mx-2 text-apple-50">
