@@ -18,6 +18,9 @@ export default {
                     950: '#052e10',
                 },
             },
+            fontFamily: {
+                general: ['GeneralSans-Variable', 'sans-serif'],
+            },
         },
     },
     plugins: [],
