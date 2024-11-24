@@ -1,3 +1,4 @@
+import { Footer } from './components/Footer';
 import { Navbar } from './components/Navbar';
 
 export const App = () => {
@@ -5,6 +6,7 @@ export const App = () => {
         <div>
             <div>
                 <Navbar />
+                <Footer />
             </div>
         </div>
     );
