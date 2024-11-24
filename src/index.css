@@ -1,3 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Funnel+Display:wght@300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'GeneralSans-Variable';
+        src: url('./assets/fonts/GeneralSans-Variable.ttf');
+        font-weight: 200 700;
+        font-style: normal;
+    }
+}
+h1,
+h2,
+h3,
+h4 {
+    @apply font-general;
+}
+
+a,
+p,
+span {
+    @apply font-dmserif;
+}
