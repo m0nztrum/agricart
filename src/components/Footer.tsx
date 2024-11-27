@@ -72,7 +72,7 @@ export const Footer = () => {
                 <div className="container grid grid-cols-2 gap-10 py-20 md:grid-cols-4">
                     {/* SIDE */}
                     <div>
-                        <h3 className="mb-4 text-lg font-bold">farmcart</h3>
+                        <h3 className="mb-4 text-lg font-bold">agricart</h3>
                         <p className="mb-2">Discover the freshness of nature</p>
                     </div>
 
@@ -109,7 +109,7 @@ export const Footer = () => {
 
                 {/* FOOTER BOTTOM */}
                 <div className="flex justify-between space-x-4 border-t border-gray-700 pt-8">
-                    <p className="text-sm">© {new Date().getFullYear()} farmcart. All rights reserved.</p>
+                    <p className="text-sm">© {new Date().getFullYear()} agricart. All rights reserved.</p>
                     <Link to="/about" className="underline">
                         Privacy Policy
                     </Link>
