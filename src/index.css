@@ -11,15 +11,7 @@
         font-style: normal;
     }
 }
-h1,
-h2,
-h3,
-h4 {
-    @apply font-general;
-}
 
-a,
-p,
-span {
-    @apply font-dmserif;
+body {
+    @apply font-general;
 }
