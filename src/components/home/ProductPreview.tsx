@@ -1,38 +1,28 @@
-import { ProductCard } from '../ProductCard';
-
 export const ProductPreview = () => {
-    const products = [
-        {
-            id: 1,
-            name: 'Product A',
-            description: 'High-quality, innovative product designed to simplify your daily life.',
-            price: '$49.99',
-            imageUrl: 'https://via.placeholder.com/300', // Replace with actual image URLs
-        },
-        {
-            id: 2,
-            name: 'Product B',
-            description: 'Eco-friendly product crafted with sustainability in mind.',
-            price: '$29.99',
-            imageUrl: 'https://via.placeholder.com/300', // Replace with actual image URLs
-        },
-        {
-            id: 3,
-            name: 'Product C',
-            description: 'A versatile product offering unmatched performance and reliability.',
-            price: '$79.99',
-            imageUrl: 'https://via.placeholder.com/300', // Replace with actual image URLs
-        },
-    ];
-
     return (
-        <div className="bg-gray-100 px-8 py-16">
-            <div className="mx-auto max-w-6xl">
-                <h2 className="mb-10 text-center text-4xl font-bold">Featured Products</h2>
-                <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                    {products.map((product) => (
-                        <ProductCard key={product.id} product={product} />
-                    ))}
+        <div className="px-16 py-28">
+            <div className="grid grid-cols-2 gap-20">
+                <div>
+                    <h2 className="mb-6 text-3xl">Discover the Freshest Farm Products Delivered Right to Your Doorstep</h2>
+                    <p className="mb-8">
+                        Experience the difference with our farm-fresh products that are sourced locally. Enjoy the peace of mind that comes with our organic
+                        certification.
+                    </p>
+                    <section className="grid grid-cols-2 gap-6">
+                        <div>
+                            {/* ICON HERE */}
+                            <h3 className="my-4 font-semibold">Freshness Guaranteed</h3>
+                            <p>Taste the vibrant flavours of produce picked at peak ripeness.</p>
+                        </div>
+                        <div>
+                            {/* ICON HERE */}
+                            <h3 className="my-4 font-semibold">Locally Sourced</h3>
+                            <p>Support your community by choosing products from nearby farms.</p>
+                        </div>
+                    </section>
+                </div>
+                <div>
+                    <img src="/images/placeholder-image-3610342416.png" />
                 </div>
             </div>
         </div>

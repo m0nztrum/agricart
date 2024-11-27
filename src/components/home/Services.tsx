@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react';
+import { Box } from 'lucide-react';
 const services = [
     {
         title: ' Delight in Natures Sweetness with Our Handpicked Seasonal Fruits',
@@ -22,7 +23,10 @@ export const Services = () => {
             <h2 className="mb-20 text-4xl font-bold">Explore Our Fresh and Organic Vegetables, Straight from the Farm to You</h2>
             <section className="grid grid-cols-3 gap-12 text-center">
                 {services.map((service, index) => (
-                    <div key={index}>
+                    <div className="p-5" key={index}>
+                        <div className="mb-6 flex justify-center">
+                            <Box />
+                        </div>
                         <h3 className="mb-4 text-2xl font-bold">{service.title}</h3>
                         <p className="mb-8 text-lg">{service.description}</p>
                         <a href={service.url} className="flex justify-center hover:underline">
