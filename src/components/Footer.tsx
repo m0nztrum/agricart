@@ -48,16 +48,16 @@ const quickLinks = [
         url: '/faqs',
     },
 ];
+
 const companyLinks = [
-    { title: 'Mission', url: '/mission' },
-    { title: 'Values', url: '/values' },
-    { title: 'Sustainability', url: '/sustainability' },
-    { title: 'Careers', url: '/careers' },
+    { title: 'Mission', url: '/about' },
+    { title: 'Values', url: '/about' },
+    { title: 'Sustainability', url: '/about' },
 ];
 
 export const Footer = () => {
     return (
-        <footer className="px-16 py-20">
+        <footer className="px-16 pb-10 pt-20">
             <div className="mx-auto">
                 <div className="flex justify-between">
                     <div>
