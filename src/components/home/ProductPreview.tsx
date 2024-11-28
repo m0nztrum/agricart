@@ -21,6 +21,7 @@ export const ProductPreview = () => {
                         </div>
                     </section>
                 </div>
+                {/* an image slider here*/}
                 <div>
                     <img src="/images/placeholder-image-3610342416.png" />
                 </div>
