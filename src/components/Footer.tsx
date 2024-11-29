@@ -57,7 +57,7 @@ const companyLinks = [
 
 export const Footer = () => {
     return (
-        <footer className="px-16 pb-10 pt-20">
+        <footer className="px-20 pb-10 pt-20">
             <div className="mx-auto">
                 <div className="flex justify-between">
                     <div>

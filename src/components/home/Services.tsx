@@ -19,7 +19,7 @@ const services = [
 ];
 export const Services = () => {
     return (
-        <div className="px-16 py-28">
+        <div className="px-20 py-28">
             <h2 className="mb-20 text-4xl font-bold">Explore Our Fresh and Organic Vegetables, Straight from the Farm to You</h2>
             <section className="grid grid-cols-3 gap-12 text-center">
                 {services.map((service, index) => (
