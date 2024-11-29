@@ -1,26 +1,9 @@
 import { ProductList } from '../components/product/ProductList';
-import { Product } from '../supabase/model/Product';
 import { LoadingSpinner } from '../components/Loading';
-import { supabase } from '../supabase/supabase';
-import { useEffect, useState } from 'react';
+import { useProducts } from '../hooks/useProducts';
 
 export const ProductsPage = () => {
-    const [products, setProducts] = useState<Product[]>([]);
-    const [loading, setLoading] = useState(false);
-
-    const fetchProducts = async () => {
-        setLoading(true);
-        const { data, error } = await supabase.from('products').select('*');
-        if (data && !error) {
-            setProducts(data);
-            console.log(data);
-        }
-        setLoading(false);
-    };
-
-    useEffect(() => {
-        fetchProducts();
-    }, []);
+    const { products, loading } = useProducts();
 
     return (
         <div className="px-20">
