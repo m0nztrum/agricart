@@ -12,6 +12,7 @@ export const useProducts = () => {
             const { data, error } = await supabase.from('products').select('*');
             if (data && !error) {
                 setProducts(data);
+                console.log(data);
             } else {
                 console.log('Error fetching products', error.message);
             }
