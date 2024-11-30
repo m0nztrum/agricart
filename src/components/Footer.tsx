@@ -1,27 +1,26 @@
 import { Link } from 'react-router-dom';
-import { InstagramIcon, Facebook, Linkedin, Youtube, Send } from 'lucide-react';
+import { InstagramIcon, Facebook, Linkedin, Youtube } from 'lucide-react';
 
-const socialLink = [
+const socialLinks = [
     {
-        title: 'Facebook',
+        icon: Facebook,
         url: 'https://www.facebook.com/',
+        title: 'Facebook',
     },
     {
-        title: 'Twitter',
-        url: 'https://twitter.com/',
-    },
-    {
-        title: 'Instagram',
-        url: 'https://www.instagram.com/',
-    },
-
-    {
-        title: 'Pinterest',
-        url: 'https://www.pinterest.com/',
-    },
-    {
-        title: 'LinkedIn',
+        icon: Linkedin,
         url: 'https://www.linkedin.com/',
+        title: 'LinkedIn',
+    },
+    {
+        icon: InstagramIcon,
+        url: 'https://www.instagram.com/',
+        title: 'Instagram',
+    },
+    {
+        icon: Youtube,
+        url: 'https://www.youtube.com/',
+        title: 'YouTube',
     },
 ];
 
@@ -60,102 +59,85 @@ export const Footer = () => {
         <footer className="bg-gray-50 px-4 py-16 md:px-20 md:py-20">
             <div className="container mx-auto">
                 {/* Newsletter Signup */}
-                <div className="flex flex-col items-center justify-between space-y-6 md:flex-row md:space-y-0">
+                <div className="mb-16 flex flex-col items-center justify-between space-y-6 md:flex-row md:space-y-0">
                     <div>
                         <h2 className="mb-2 text-2xl font-bold">Suscribe to Updates</h2>
                         <p className="text-gray-600">Stay informed about our latest products and offers.</p>
                     </div>
-                    <div className="space-x-2">
+                    <div className="flex w-full max-w-md space-x-2 md:w-auto">
                         <input type="email" placeholder="Your Email Here" className="border border-gray-300 p-3" />
-                        <button className="bg-green-600 p-3 text-white hover:bg-green-700">Subscribe</button>
+                        <button className="bg-apple-600 p-3 text-white hover:bg-apple-700">Subscribe</button>
                     </div>
                 </div>
 
-                {/* Newsletter Signup */}
-                <div className="mb-16 flex flex-col items-center justify-between space-y-6 md:flex-row md:space-y-0">
+                {/* Footer Colums */}
+                <div className="grid grid-cols-2 gap-10 py-20 md:grid-cols-4">
+                    {/* BRAND */}
                     <div>
-                        <h2 className="mb-2 text-2xl font-bold text-gray-800">Subscribe to Updates</h2>
-                        <p className="text-gray-600">Stay informed about our latest products and offers.</p>
-                    </div>
-                    <div className="flex w-full max-w-md md:w-auto">
-                        <input
-                            type="email"
-                            placeholder="Your Email Here"
-                            className="flex-grow rounded-l-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500"
-                        />
-                        <button className="flex items-center rounded-r-lg bg-green-600 px-6 py-3 text-white transition-colors hover:bg-green-700">
-                            <Send className="mr-2 h-5 w-5" />
-                            Subscribe
-                        </button>
-                    </div>
-                </div>
-
-                <div className="container grid grid-cols-2 gap-10 py-20 md:grid-cols-4">
-                    {/* SIDE */}
-                    <div>
-                        <h3 className="mb-4 text-lg font-bold">agricart</h3>
-                        <p className="mb-2">Discover the freshness of nature</p>
+                        <h3 className="mb-4 text-2xl font-bold text-green-600">agricart</h3>
+                        <p className="text-gray-600">Discover the freshness of nature</p>
                     </div>
 
-                    {/* LEFT */}
-                    <div className="flex flex-col">
+                    {/* Quick Links */}
+                    <div>
                         <h3 className="mb-4 text-lg">Quick Links</h3>
                         {quickLinks.map((item, index) => (
-                            <Link key={index} to={item.url} className="duration-400 transition hover:underline">
-                                {item.title}
-                            </Link>
-                        ))}
-                    </div>
-
-                    {/* CENTER */}
-                    <div className="flex flex-col">
-                        <h3 className="mb-4 text-lg">Our Company</h3>
-                        {companyLinks.map((item, index) => (
-                            <Link to="/" key={index}>
-                                {item.title}
-                            </Link>
-                        ))}
-                    </div>
-
-                    {/* RIGHT */}
-                    <div className="flex flex-col">
-                        <h3 className="mb-4 text-lg">Follow Us</h3>
-                        {socialLink.map((item, index) => (
-                            <a
+                            <Link
                                 key={index}
-                                href={item.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="duration-400 transition hover:underline"
+                                to={item.url}
+                                className="mb-2 block text-gray-600 transition-colors hover:text-apple-600"
                             >
                                 {item.title}
-                            </a>
+                            </Link>
                         ))}
+                    </div>
+
+                    {/* Company Links */}
+                    <div>
+                        <h3 className="mb-4 text-lg font-semibold text-gray-800">Our Company</h3>
+                        {companyLinks.map((link, index) => (
+                            <Link
+                                key={index}
+                                to={link.url}
+                                className="mb-2 block text-gray-600 transition-colors hover:text-green-600"
+                            >
+                                {link.title}
+                            </Link>
+                        ))}
+                    </div>
+
+                    {/* Social Links */}
+                    <div>
+                        <h3 className="mb-4 text-lg font-semibold text-gray-800">Follow Us</h3>
+                        <div className="flex space-x-4">
+                            {socialLinks.map((social, index) => (
+                                <a
+                                    key={index}
+                                    href={social.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-gray-600 transition-colors hover:text-green-600"
+                                    aria-label={social.title}
+                                >
+                                    <social.icon className="h-6 w-6" />
+                                </a>
+                            ))}
+                        </div>
                     </div>
                 </div>
 
-                {/* FOOTER BOTTOM */}
-                <div className="flex justify-between space-x-4 border-t border-gray-700 pt-8">
-                    <p className="text-sm">© {new Date().getFullYear()} agricart. All rights reserved.</p>
-                    <Link to="/about" className="underline">
-                        Privacy Policy
-                    </Link>
-                    <Link to="/about" className="underline">
-                        Terms of Service.
-                    </Link>
+                {/* Footer Bottom */}
+                <div className="flex flex-col items-center justify-between space-y-4 border-t border-gray-600 pt-8 md:flex-row md:space-y-0">
+                    <p className="text-sm text-gray-600">
+                        © {new Date().getFullYear()} agricart. All rights reserved.
+                    </p>
                     <div className="flex space-x-4">
-                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-                            <Facebook className="h-5 w-5" />
-                        </a>
-                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
-                            <Linkedin className="h-5 w-5" />
-                        </a>
-                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-                            <InstagramIcon className="h-5 w-5" />
-                        </a>
-                        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
-                            <Youtube className="h-5 w-5" />
-                        </a>
+                        <Link to="/privacy" className="text-sm text-gray-600 transition-colors hover:text-green-600">
+                            Privacy Policy
+                        </Link>
+                        <Link to="/terms" className="text-sm text-gray-600 transition-colors hover:text-green-600">
+                            Terms of Service
+                        </Link>
                     </div>
                 </div>
             </div>
