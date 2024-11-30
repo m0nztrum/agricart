@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 export const Navbar = () => {
     return (
-        <nav className="px-16 py-1">
+        <nav className="fixed left-0 top-0 z-50 w-full border border-b-black bg-white px-16 py-1">
             <div className="mx-auto flex justify-between">
                 <Link to="/">
                     <h1 className="text-2xl font-bold text-apple-600">agricart</h1>

@@ -1,6 +1,6 @@
 export const Cta = () => {
     return (
-        <div className="px-20 py-28">
+        <div className="container mx-auto px-4 py-16 md:px-20 md:py-28">
             <div className="flex justify-between">
                 <div>
                     <h3 className="font-bold">Discover our fresh farm products.</h3>

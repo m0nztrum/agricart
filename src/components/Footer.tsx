@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { InstagramIcon, Facebook, Linkedin, Youtube } from 'lucide-react';
+import { InstagramIcon, Facebook, Linkedin, Youtube, Send } from 'lucide-react';
 
 const socialLink = [
     {
@@ -57,18 +57,39 @@ const companyLinks = [
 
 export const Footer = () => {
     return (
-        <footer className="px-20 pb-10 pt-20">
-            <div className="mx-auto">
-                <div className="flex justify-between">
+        <footer className="bg-gray-50 px-4 py-16 md:px-20 md:py-20">
+            <div className="container mx-auto">
+                {/* Newsletter Signup */}
+                <div className="flex flex-col items-center justify-between space-y-6 md:flex-row md:space-y-0">
                     <div>
-                        <h2 className="font-bold">Suscribe to Updates</h2>
-                        <p className="text-xs">Stay informed about our latest products and offers.</p>
+                        <h2 className="mb-2 text-2xl font-bold">Suscribe to Updates</h2>
+                        <p className="text-gray-600">Stay informed about our latest products and offers.</p>
                     </div>
                     <div className="space-x-2">
                         <input type="email" placeholder="Your Email Here" className="border border-gray-300 p-3" />
                         <button className="bg-green-600 p-3 text-white hover:bg-green-700">Subscribe</button>
                     </div>
                 </div>
+
+                {/* Newsletter Signup */}
+                <div className="mb-16 flex flex-col items-center justify-between space-y-6 md:flex-row md:space-y-0">
+                    <div>
+                        <h2 className="mb-2 text-2xl font-bold text-gray-800">Subscribe to Updates</h2>
+                        <p className="text-gray-600">Stay informed about our latest products and offers.</p>
+                    </div>
+                    <div className="flex w-full max-w-md md:w-auto">
+                        <input
+                            type="email"
+                            placeholder="Your Email Here"
+                            className="flex-grow rounded-l-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500"
+                        />
+                        <button className="flex items-center rounded-r-lg bg-green-600 px-6 py-3 text-white transition-colors hover:bg-green-700">
+                            <Send className="mr-2 h-5 w-5" />
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+
                 <div className="container grid grid-cols-2 gap-10 py-20 md:grid-cols-4">
                     {/* SIDE */}
                     <div>
@@ -100,7 +121,13 @@ export const Footer = () => {
                     <div className="flex flex-col">
                         <h3 className="mb-4 text-lg">Follow Us</h3>
                         {socialLink.map((item, index) => (
-                            <a key={index} href={item.url} target="_blank" rel="noopener noreferrer" className="duration-400 transition hover:underline">
+                            <a
+                                key={index}
+                                href={item.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="duration-400 transition hover:underline"
+                            >
                                 {item.title}
                             </a>
                         ))}
