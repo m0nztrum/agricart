@@ -3,7 +3,7 @@ import { ShoppingCart } from 'lucide-react';
 
 export const Hero = () => {
     return (
-        <div className="relative flex min-h-screen items-center justify-center bg-[url(/images/agri-bg.jpg)] bg-cover bg-center bg-no-repeat">
+        <div className="relative flex min-h-screen items-center justify-center bg-[url(/assets/images/agri-bg.jpg)] bg-cover bg-center bg-no-repeat">
             <div className="absolute inset-0 bg-black opacity-60"></div>
             <div className="container relative z-10 mx-auto px-4 text-center text-white">
                 <div className="mx-auto max-w-3xl">

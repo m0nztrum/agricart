@@ -5,11 +5,11 @@ export const ProductPreview = () => {
 
     const images = [
         {
-            src: '/images/homepage/large-red-tomatoes.jpg',
+            src: '/assets/images/homepage/large-red-tomatoes.jpg',
             alt: 'Fresh red tomatoes in a farm setting',
         },
         {
-            src: '/images/homepage/mesh-basket-with-fresh-eggs.jpg',
+            src: '/assets/images/homepage/mesh-basket-with-fresh-eggs.jpg',
             alt: 'Mesh basket filled with farm-fresh eggs',
         },
     ];

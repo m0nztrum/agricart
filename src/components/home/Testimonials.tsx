@@ -2,7 +2,7 @@ import { Star } from 'lucide-react';
 
 export const Testimonials = () => {
     const testimonial = {
-        image: '/images/placeholder-image-3610342416.png',
+        image: '/assets/images/placeholder-image-3610342416.png',
         quote: "The quality of the farm products is exceptional! I couldn't be happier with my purchase.",
         name: 'John Doe',
         title: 'Farm Manager, Green Acres',
