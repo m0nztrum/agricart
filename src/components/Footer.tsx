@@ -56,7 +56,7 @@ const companyLinks = [
 
 export const Footer = () => {
     return (
-        <footer className="bg-gray-50 px-4 py-16 md:px-20 md:py-20">
+        <footer className="bg-gray-50 px-4 py-8 md:px-20 md:py-12">
             <div className="container mx-auto">
                 {/* Newsletter Signup */}
                 <div className="mb-16 flex flex-col items-center justify-between space-y-6 md:flex-row md:space-y-0">
