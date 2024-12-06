@@ -1,7 +1,17 @@
 import { useState } from 'react';
 import { ChevronUp, ChevronDown } from 'lucide-react';
 
-export const FAQ = ({ faqs }) => {
+interface FAQItem {
+    heading: string;
+    description: string;
+}
+
+// Add type for props
+interface FAQProps {
+    faqs: FAQItem[];
+}
+
+export const FAQ = ({ faqs }: FAQProps) => {
     const [activeIndex, setActiveIndex] = useState<null | number>(null);
 
     const toggleFAQ = (index: number) => {
