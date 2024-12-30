@@ -11,7 +11,6 @@ export const Home = () => {
             <Services />
             <ProductPreview />
             <Testimonials />
-            <Cta />
         </div>
     );
 };
