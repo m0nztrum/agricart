@@ -16,7 +16,7 @@ export const ProductCard = ({ product }: { product: Product }) => {
                 )}
                 <div className="space-y-3 p-4">
                     <div className="flex items-center justify-between">
-                        <h3 className="max-w-[70%] truncate text-xl font-bold text-gray-800">{product.name}</h3>
+                        <h4 className="max-w-[70%] truncate font-bold text-gray-800">{product.name}</h4>
                         <span className="text-sm text-gray-500">{product.stock} pcs</span>
                     </div>
 

@@ -8,7 +8,7 @@ export const ProductsPage = () => {
     return (
         <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
             <div className="mb-10 text-center">
-                <h1 className="mb-4 text-3xl font-extrabold text-gray-900 md:text-4xl">Product</h1>
+                <h1 className="mb-4 font-extrabold text-gray-900 md:text-4xl">Product</h1>
                 <p className="mx-auto max-w-2xl text-lg text-gray-600">
                     Explore our fresh, high-quality farm products today.
                 </p>

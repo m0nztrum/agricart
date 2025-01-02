@@ -7,9 +7,7 @@ export const Hero = () => {
             <div className="absolute inset-0 bg-black opacity-60"></div>
             <div className="container relative z-10 mx-auto px-4 text-center text-white">
                 <div className="mx-auto max-w-3xl">
-                    <h1 className="mb-6 text-3xl font-bold leading-tight md:text-5xl">
-                        Farm Fresh Products Delivered to Your doorstep
-                    </h1>
+                    <h1 className="mb-6 font-bold leading-tight">Farm Fresh Products Delivered to Your doorstep</h1>
                     <p className="mx-auto mb-8 max-w-xl text-base leading-relaxed text-gray-200 md:text-lg">
                         Discover the best in farm-fresh produce, sourced directly from local farms. Experience quality
                         and taste like never before!

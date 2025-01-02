@@ -61,7 +61,7 @@ export const Footer = () => {
                 {/* Newsletter Signup */}
                 <div className="mb-16 flex flex-col items-center justify-between space-y-6 md:flex-row md:space-y-0">
                     <div>
-                        <h2 className="mb-2 text-2xl font-bold">Suscribe to Updates</h2>
+                        <h2 className="mb-2 font-bold">Suscribe to Updates</h2>
                         <p className="text-gray-600">Stay informed about our latest products and offers.</p>
                     </div>
                     <div className="flex w-full max-w-md space-x-2 md:w-auto">
@@ -74,13 +74,13 @@ export const Footer = () => {
                 <div className="grid grid-cols-2 gap-10 py-20 md:grid-cols-4">
                     {/* BRAND */}
                     <div>
-                        <h3 className="mb-4 text-2xl font-bold text-green-600">agricart</h3>
+                        <h3 className="mb-4 font-bold text-green-600">agricart</h3>
                         <p className="text-gray-600">Discover the freshness of nature</p>
                     </div>
 
                     {/* Quick Links */}
                     <div>
-                        <h3 className="mb-4 text-lg">Quick Links</h3>
+                        <h3 className="mb-4 font-semibold">Quick Links</h3>
                         {quickLinks.map((item, index) => (
                             <Link
                                 key={index}
@@ -94,7 +94,7 @@ export const Footer = () => {
 
                     {/* Company Links */}
                     <div>
-                        <h3 className="mb-4 text-lg font-semibold text-gray-800">Our Company</h3>
+                        <h3 className="mb-4 font-semibold text-gray-800">Our Company</h3>
                         {companyLinks.map((link, index) => (
                             <Link
                                 key={index}
@@ -108,7 +108,7 @@ export const Footer = () => {
 
                     {/* Social Links */}
                     <div>
-                        <h3 className="mb-4 text-lg font-semibold text-gray-800">Follow Us</h3>
+                        <h3 className="mb-4 font-semibold text-gray-800">Follow Us</h3>
                         <div className="flex space-x-4">
                             {socialLinks.map((social, index) => (
                                 <a
