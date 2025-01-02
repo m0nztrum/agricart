@@ -3,13 +3,21 @@ import { useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Link } from 'react-router-dom';
+import { useSignUp } from '../hooks/useSignUp';
 
 export const SignUp = () => {
-    const schemaValidation = z.object({
-        name: z.string().min(5, { message: 'Name must be at least 5 characters long.' }),
-        email: z.string().min(1, { message: 'Email is required' }).email('Invalid Email.'),
-        password: z.string().min(6, { message: 'Password must be at least 6 characters long.' }),
-    });
+    const { handleSignUp, loading } = useSignUp();
+    const schemaValidation = z
+        .object({
+            name: z.string().min(5, { message: 'Name must be at least 5 characters long.' }),
+            email: z.string().min(1, { message: 'Email is required' }).email('Invalid Email.'),
+            password: z.string().min(6, { message: 'Password must be at least 6 characters long.' }),
+            confirmPassword: z.string().min(1, { message: 'Confirm Password is required.' }),
+        })
+        .refine((data) => data.password === data.confirmPassword, {
+            message: "Passwords don't match.",
+            path: ['confirmPassword'],
+        });
 
     type FormData = z.infer<typeof schemaValidation>;
 
@@ -22,6 +30,7 @@ export const SignUp = () => {
     });
 
     const onSignupSubmit = (data: FormData) => {
+        handleSignUp(data.email, data.password, data.name);
         console.log('logged in.', data);
     };
 
@@ -33,7 +42,7 @@ export const SignUp = () => {
                 <h2>Welcome back!</h2>
                 <p className="text-gray-600">
                     Already have an account?{' '}
-                    <Link to="/signup" className="text-green-500">
+                    <Link to="/login" className="text-green-500">
                         Log In
                     </Link>
                 </p>
@@ -79,12 +88,26 @@ export const SignUp = () => {
                         />
                         {errors.password && <p className="text-sm text-red-500">{errors.password.message}</p>}
                     </div>
+
+                    <div className="flex flex-col">
+                        <label>Confirm Password*</label>
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            {...register('confirmPassword')}
+                            placeholder="Confirm your password"
+                            className="rounded border p-2"
+                        />
+                        {errors.confirmPassword && (
+                            <p className="text-sm text-red-500">{errors.confirmPassword.message}</p>
+                        )}
+                    </div>
                 </div>
                 <button
                     type="submit"
                     className="mt-4 w-full rounded-lg bg-green-500 px-6 py-3 font-semibold text-white hover:bg-green-600"
                 >
-                    Signup
+                    {loading ? 'Signing up...' : 'Sign Up'}
                 </button>
             </form>
         </div>

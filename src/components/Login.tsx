@@ -3,8 +3,10 @@ import { useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Link } from 'react-router-dom';
+import { useLogin } from '../hooks/useLogin';
 
 export const Login = () => {
+    const { handleLogin, loading } = useLogin();
     const schemaValidation = z.object({
         email: z.string().min(1, { message: 'Email is required' }).email('Invalid Email.'),
         password: z.string().min(6, { message: 'Password must be at least 6 characters long.' }),
@@ -21,7 +23,7 @@ export const Login = () => {
     });
 
     const onLoginSubmit = (data: FormData) => {
-        console.log('logged in.', data);
+        handleLogin(data.email, data.password);
     };
 
     const form = useRef<HTMLFormElement>(null);
@@ -70,8 +72,9 @@ export const Login = () => {
                 <button
                     type="submit"
                     className="mt-4 w-full rounded-lg bg-green-500 px-6 py-3 text-white hover:bg-green-600"
+                    disabled={loading}
                 >
-                    Login
+                    {loading ? 'Login In..' : 'Login'}
                 </button>
             </form>
         </div>
