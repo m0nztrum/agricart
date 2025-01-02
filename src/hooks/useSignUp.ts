@@ -6,10 +6,10 @@ export const useSignUp = () => {
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
 
-    const handleSignUp = async (email: string, password: string) => {
+    const handleSignUp = async (email: string, password: string, name: string) => {
         setLoading(true);
         try {
-            const data = await signup({ email, password });
+            const data = await signup({ email, password, name });
             console.log('Signup successful', data);
             navigate('/login');
         } catch (error) {
