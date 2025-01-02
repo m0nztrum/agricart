@@ -1,10 +1,11 @@
-import { supabase } from '../supabase/supabase';
 import { useState, useEffect } from 'react';
 import { Product } from '../supabase/model/Product';
+import { useSupabase } from '../contexts/SupabaseAuth';
 
 export const useProducts = () => {
     const [loading, setLoading] = useState(false);
     const [products, setProducts] = useState<Product[]>([]);
+    const supabase = useSupabase();
 
     useEffect(() => {
         const fetchProducts = async () => {
