@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import { X, Menu } from 'lucide-react';
+import { X, Menu, ShoppingCart } from 'lucide-react';
 
 export const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const navLinks = [
-        { title: 'Home', path: '/' },
-        { title: 'Products', path: '/products' },
-        { title: 'Contact', path: '/contact' },
+        { title: 'shop', path: '/products' },
+        { title: 'about', path: '/about' },
+        { title: 'contact', path: '/contact' },
     ];
 
     const toggleMenu = () => {
@@ -16,10 +16,10 @@ export const Navbar = () => {
     };
 
     return (
-        <nav className="fixed left-0 top-0 z-50 w-full border border-b-black bg-white">
+        <nav className="fixed left-0 top-0 z-50 w-full bg-white">
             <div className="container mx-auto flex justify-between px-4 py-2">
                 <Link to="/">
-                    <h1 className="text-2xl font-bold text-apple-600">agricart</h1>
+                    <h1 className="text-2xl font-bold text-green-600">agricart</h1>
                 </Link>
                 {/* Desktop sizes */}
                 <div className="hidden items-center space-x-6 md:flex">
@@ -32,6 +32,13 @@ export const Navbar = () => {
                             {link.title}
                         </Link>
                     ))}
+                </div>
+
+                <div className="flex justify-between space-x-4">
+                    <button className="font-medium">cart ( 1 )</button>
+                    <button className="font-medium text-green-600 hover:text-green-500 hover:underline hover:underline-offset-2">
+                        <Link to="/login">Login</Link>
+                    </button>
                 </div>
 
                 {/* Mobile Menu Toggle */}

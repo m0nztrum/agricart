@@ -3,7 +3,8 @@ export const Contact = () => {
         <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
             <div className="relative flex flex-col items-center px-5 py-32 text-gray-700">
                 <div className="mb-12">
-                    <h2 className="text-center text-4xl font-bold md:text-5xl">Get In Touch.</h2>
+                    <h1 className="text-center">Have any questions ?</h1>
+                    <p className="text-center font-semibold">Get In touch</p>
                 </div>
                 <form className="w-full max-w-2xl space-y-6">
                     <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">

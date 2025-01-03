@@ -19,7 +19,7 @@ const faqs = [
 
 export const About = () => {
     return (
-        <div className="px-16">
+        <div className="container mx-auto py-12">
             <h1>About Us.</h1>
             <FAQ faqs={faqs} />
         </div>
